@@ -114,13 +114,94 @@
                     <div class="boxHelp pedirAjuda text-center">
                         <h3>Precisa de ajuda?</h3>
                         <p>Existem pessoas que querem te ajudar, mas para isso</p>
-                        <button type="button" class="btn btn-info">Clique e nos conte mais!</button>
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalHelpMe">Clique e nos conte mais!</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- content-->
+
+    <!-- modal para pedir ajuda -->
+    <div class="modal fade" id="modalHelpMe" tabindex="-1" aria-labelledby="modalHelpMeLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="modalHelpMeLabel">Preciso de Ajuda</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <form name="formHelpMe" id="formHelpMe" method="POST" action="">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="f_nome">Seu Nome</label>
+                                    <input type="text" class="form-control" id="f_nome" aria-describedby="f_nomeHelp">
+                                    <small id="f_nomeHelp" class="form-text text-muted"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="f_telefone">Seu Telefone</label>
+                                    <input type="text" class="form-control" id="f_telefone" aria-describedby="f_telefoneHelp">
+                                    <small id="f_telefoneHelp" class="form-text text-muted"></small>
+                                </div>        
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="f_email">Seu E-mail</label>
+                                    <input type="email" class="form-control" id="f_email" aria-describedby="f_emailHelp">
+                                    <small id="f_emailHelp" class="form-text text-muted"></small>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="f_cidade">Sua Cidade</label>
+                                    <input type="email" class="form-control" id="f_cidade" aria-describedby="f_cidadeHelp">
+                                    <small id="f_cidadeHelp" class="form-text text-muted"></small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="f_idade">Sua Idade</label>
+                                    <input type="email" class="form-control" id="f_idade" aria-describedby="f_idadeHelp">
+                                    <small id="f_idadeHelp" class="form-text text-muted"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="f_pedido">Seu Pedido de Ajuda</label>
+                                    <textarea class="form-control" id="f_pedido" aria-describedby="f_pedidoHelp"></textarea>
+                                    <small id="f_pedidoHelp" class="form-text text-muted"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Permito que o ajudante tenha acesso ao meu número de celular</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-success">Enviar Pedido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal para pedir ajuda -->
 
     <!-- footer -->
     <footer>
