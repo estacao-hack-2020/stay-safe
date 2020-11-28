@@ -155,9 +155,12 @@ header .navbar-staysafe .nav-item a:hover {
     border-radius: 15px;
     padding: 25px;
     border: 3px solid #ecf0f1;
-    box-shadow: 0px 0px 5px 2px #ecf0f1;
     overflow: hidden;
     max-height: 300px;
+}
+
+.help .boxHelp:hover {
+    box-shadow: 0px 0px 5px 2px #ecf0f1;
 }
 
 .help .boxHelp h3 {
