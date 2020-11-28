@@ -3,7 +3,6 @@
 body {
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
-    margin-bottom: 100px;
 }
 
 .banner {
@@ -192,4 +191,217 @@ header .navbar-staysafe .nav-item a:hover {
 
 .help .boxHelp.pedirAjuda p{
     color: black;
+}
+
+footer {
+    background-color: #2c3e50;
+    margin-top: 200px;
+    padding: 30px 0px 30px 0px;
+    color: #FFF;
+    font-weight: 100;
+    font-size: 1rem;
+    position: relative;
+}
+
+footer a {
+    color: #FFF;
+    font-size: 1.5rem;
+}
+
+footer a:hover {
+    color: #FFF;
+    text-decoration: underline;
+    font-size: 1.5rem;
+}
+
+footer img {
+    position: absolute;
+}
+
+.animacao1 {
+    top: -93px;
+    -webkit-animation: animacao1 35s linear 6s infinite;
+    animation: animacao1 35s linear 6s infinite;
+    opacity: 0;
+}
+
+.animacao2 {
+    top: -100px;
+    -webkit-animation: animacao2 45s linear 15s infinite;
+    animation: animacao2 45s linear 15s infinite;
+    opacity: 0;
+}
+
+.animacao3 {
+    top: -120px;
+    -webkit-animation: animacao3 50s linear 6s infinite;
+    animation: animacao3 50s linear 3s infinite;
+    opacity: 0;
+}
+
+.animacao4 {
+    top: -94px;
+    -webkit-animation: animacao4 40s linear 18s infinite;
+    animation: animacao4 40s linear 18s infinite;
+    opacity: 0;
+}
+
+@-webkit-keyframes animacao1 {
+    0% {
+        opacity: 0;
+        right: 0
+		
+    }
+    10% {
+        opacity: 1;
+        right: 10%;
+    }
+    90% {
+        opacity: 1;
+        right: 90%
+    }
+    100% {
+        opacity: 0;
+        right: 100%
+    }
+}
+
+@keyframes animacao1 {
+    0% {
+        opacity: 0;
+        left: 0;
+		bottom:0;
+    }
+    10% {
+        opacity: 1;
+        left: 10%;
+		bottom:0%;
+    }
+	
+    90% {
+        opacity: 1;
+        left: 90%
+    }
+    100% {
+        opacity: 0;
+        left: 100%
+    }
+}
+
+@-webkit-keyframes animacao2 {
+    0% {
+        opacity: 0;
+        left: 0
+    }
+    10% {
+        opacity: 1;
+        left: 10%;
+    }
+    90% {
+        opacity: 1;
+        left: 90%
+    }
+    100% {
+        opacity: 0;
+        left: 100%
+    }
+}
+
+@keyframes animacao2 {
+    0% {
+        opacity: 0;
+        left: 0
+    }
+    10% {
+        opacity: 1;
+        left: 10%;
+    }
+    90% {
+        opacity: 1;
+        left: 90%
+    }
+    100% {
+        opacity: 0;
+        left: 100%
+    }
+}
+
+@-webkit-keyframes animacao3 {
+    0% {
+        opacity: 0;
+        right: 0
+		
+    }
+    5% {
+        opacity: 1;
+        right: 5%;
+    }
+    90% {
+        opacity: 1;
+        right: 90%
+    }
+    100% {
+        opacity: 0;
+        right: 100%
+    }
+}
+
+@keyframes animacao3 {
+    0% {
+        opacity: 0;
+        right: 0;
+		bottom:0;
+    }
+    10% {
+        opacity: 1;
+        right: 10%;
+		bottom:0%;
+    }
+	
+    90% {
+        opacity: 1;
+        right: 90%
+    }
+    100% {
+        opacity: 0;
+        right: 100%
+    }
+}
+
+@-webkit-keyframes animacao4 {
+    0% {
+        opacity: 0;
+        right: 0
+    }
+    10% {
+        opacity: 1;
+        right: 10%;
+    }
+    90% {
+        opacity: 1;
+        right: 90%
+    }
+    100% {
+        opacity: 0;
+        right: 100%
+    }
+}
+
+@keyframes animacao4 {
+    0% {
+        opacity: 0;
+        right: 0
+    }
+    10% {
+        opacity: 1;
+        right: 10%;
+    }
+    90% {
+        opacity: 1;
+        right: 90%
+    }
+    100% {
+        opacity: 0;
+        right: 100%
+    }
 }
