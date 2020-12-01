@@ -1,4 +1,4 @@
-function renderFooter() {
+export default function render() {
     //insere o código html dentro da tag footer
     document.querySelector('footer')
         .innerHTML = `

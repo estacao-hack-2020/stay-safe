@@ -1,4 +1,4 @@
-function renderHeader() {
+export default function render() {
     //insere o código html dentro da tag header
     document.querySelector('header')
         .innerHTML = `
