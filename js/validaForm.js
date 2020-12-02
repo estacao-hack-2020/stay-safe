@@ -1,23 +1,18 @@
 // Validação formulario
-console.log("Ola")
+
 
 let formulario = document.getElementById("formHelpMe");
- let nomeForm = document.getElementById("f_nome");
+ let checked = false;
  let sendButton = document.querySelector(".btn-success")
-// let telForm
-// let emailForm
-// let cidade
+
 sendButton.addEventListener("click", function(event) {
-    event.preventDefault();
-    let inputs = document.querySelectorAll("input");
+    let inputs = document.querySelectorAll("#formHelpMe input");
     let textArea = document.querySelector("#formHelpMe textarea")
-
-    // if(nomeForm.value == ""){
-    //     alert("")
-    // }
-
+ 
     for (i = 0; i < inputs.length; i++) {
+        if(checked == false){
 
+        
         if(inputs[i].type == "password") {
 
             if(document.getElementById(inputs[i].id).value.length < 11) {
@@ -41,7 +36,9 @@ sendButton.addEventListener("click", function(event) {
                 document.getElementById("f_pedido"+'Help').innerText = "Desculpe, este campo não pode ser deixado em branco";
                 document.getElementById("f_pedido"+'Help').classList.remove('text-muted');
                 document.getElementById("f_pedido"+'Help').style.color = "red";
-        }
-
+            }else{
+                document.getElementById("f_pedido"+'Help').innerText = '';
+            }
+    }
     }
 });
