@@ -208,6 +208,86 @@
     </div>
     <!-- modal para pedir ajuda -->
 
+    <!-- modal de contato-->
+    <div class="modal fade" id="modalContact" tabindex="-1" aria-labelledby="modalContact" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="modalContactLabel">Contate-nos!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <form name="formContact" id="formContact" method="POST" action="">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label class="form-contact-label" for="exampleCheck1">Sua opinião é muito importante para pordermos aprimiorar os nossos serviços. Por favor, deixe os seus dados e a sua mensagem nos campos abaixo que teremos o maior prazer em retornar.</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="f_nome">Seu Nome</label>
+                                    <input type="text" class="form-control" id="f_nome" aria-describedby="f_nomeHelp" placeholder="Ex: João da Silva">
+                                    <small id="f_nomeContact" class="form-text text-muted"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="f_telefone">Seu Telefone</label>
+                                    <input type="text" class="form-control" id="f_telefone" aria-describedby="f_telefoneHelp" placeholder="Ex: (11) 9 9999-9999">
+                                    <small id="f_telefoneContact" class="form-text text-muted"pla></small>
+                                </div>        
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="f_email">Seu E-mail</label>
+                                    <input type="email" class="form-control" id="f_email" aria-describedby="f_emailHelp" placeholder="Ex: email@dominio.com.br">
+                                    <small id="f_emailHelp" class="form-text text-muted"></small>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="f_motivo">Informe o motivo do contato</label>
+                                    <select class="form-control" id="f_motivo" aria-describedby="f_motivoContact">
+                                        <option id="select-reason">Selecione o motivo...</option>
+                                        <option id="doubt">Dúvidas</option>
+                                        <option id="suggestion">Sugestões</option>
+                                        <option id="claims">Reclamações</option>
+                                        <option id="other">Outro</option>
+                                        
+                                      </select>
+                                    <small id="f_motivoContact" class="form-text text-muted"></small>
+                                </div>        
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="f_pedido">Escreva sua mensagem</label>
+                                    <textarea class="form-control" id="f_pedido" aria-describedby="f_pedidoHelp" placeholder="Descreva o motivo do contato."></textarea>
+                                    <small id="f_pedidoHelp" class="form-text text-muted"></small>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-success">Enviar Mensagem</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal de contato -->
+
     <!-- footer -->
     <footer>
         <div class="animacoes">
