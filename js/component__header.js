@@ -14,7 +14,7 @@ export default function render() {
                     <ul class="nav navbar-nav navbar-right">
                         <li class="nav-item"><a class="nav-link purple" href="#status">Status COVID-19</a></li>
                         <li class="nav-item"><a class="nav-link purple" href="#help">Pedido de Ajuda</a></li>
-                        <li class="nav-item"><a class="nav-link purple" href="contato.html">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link purple" data-toggle="modal" data-target="#modalContact">Contato</a></li>
                     </ul>
                     </div>
                 </nav>
