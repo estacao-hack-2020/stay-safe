@@ -90,6 +90,11 @@ header {
     background-color: rgba(0,0,0,0.7);
 }
 
+.form-contact-label {
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
 .navbar-toggler {
     background-color: #8e44ad;
     color: white;
