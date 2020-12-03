@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/da77f520d1.js" crossorigin="anonymous"></script>
+
+    <!-- Nosso CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>StaySafe! Monitoramento COVID-19</title>
+    
+  </head>
+  <body>
+    
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-staysafe">
+                <a class="navbar-brand purple" href="index.html"><img src="image/logo_staySafe.png"> StaySafe</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto"></ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item"><a class="nav-link purple" href="global.html">Status COVID-19</a></li>
+                    <li class="nav-item"><a class="nav-link purple" href="#help">Pedido de Ajuda</a></li>
+                    <li class="nav-item"><a class="nav-link purple" data-toggle="modal" data-target="#modalContact">Contato</a></li>                  </ul>
+                </div>
+              </nav>
+        </div>
+    </header>
+
+    <!-- banner -->
+    <section id="banner" class="banner green">
+        <div class="container infos">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 id="localizacao">StaySafe - Rio Grande do Sul</h1>
+                    <h2 id="casos_confirmados">Casos confirmados: <mark>1067454</mark></h2>
+                    <ul>
+                        <li id="casos_ativos">Ativos: <mark>1067454</mark></li>
+                        <li id="casos_recuperados">Recuperados: <mark>30504</mark></li>
+                        <li id="casos_mortes">Mortes: <mark>45004</mark></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="banner-home-divisor"></div>
+    </section>
+    <!-- banner -->
+
+    <!-- content-->
+    <section id="help" class="help">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-4">
+                    <div class="boxHelp">
+                        <h3>Porto Alegre</h3>
+                        <ul>
+                            <li id="pessoa">Michel Miléski</li>
+                            <li id="idade">35 anos</li>
+                            <li id="pedido" class="pedido">Necessito ir no mercado para ir fazer compras...</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="boxHelp">
+                        <h3>Viamão</h3>
+                        <ul>
+                            <li id="pessoa">Michel Miléski</li>
+                            <li id="idade">35 anos</li>
+                            <li id="pedido" class="pedido">Necessito ir no mercado para ir fazer compras...</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="boxHelp">
+                        <h3>Gravataí</h3>
+                        <ul>
+                            <li id="pessoa">Michel Miléski</li>
+                            <li id="idade">35 anos</li>
+                            <li id="pedido" class="pedido">Necessito ir no mercado para ir fazer compras...</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-4">
+                    <div class="boxHelp">
+                        <h3>Porto Alegre</h3>
+                        <ul>
+                            <li id="pessoa">Michel Miléski</li>
+                            <li id="idade">35 anos</li>
+                            <li id="pedido" class="pedido">Necessito ir no mercado para ir fazer compras...</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="boxHelp">
+                        <h3>Viamão</h3>
+                        <ul>
+                            <li id="pessoa">Michel Miléski</li>
+                            <li id="idade">35 anos</li>
+                            <li id="pedido" class="pedido">Necessito ir no mercado para ir fazer compras...</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="boxHelp pedirAjuda text-center">
+                        <h3>Precisa de ajuda?</h3>
+                        <p>Existem pessoas que querem te ajudar, mas para isso</p>
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalHelpMe">Clique e nos conte mais!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- content-->
+
+    <!-- modal para pedir ajuda -->
+    <div class="modal fade" id="modalHelpMe" tabindex="-1" aria-labelledby="modalHelpMeLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="modalHelpMeLabel">Preciso de Ajuda</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <form name="formHelpMe" id="formHelpMe" method="POST" action="">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="f_nome">Seu Nome</label>
+                                    <input type="text" class="form-control" id="f_nome" aria-describedby="f_nomeHelp">
+                                    <small id="f_nomeHelp" class="form-text text-muted"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="f_telefone">Seu Telefone</label>
+                                    <input type="text" class="form-control" id="f_telefone" aria-describedby="f_telefoneHelp">
+                                    <small id="f_telefoneHelp" class="form-text text-muted"></small>
+                                </div>        
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="f_email">Seu E-mail</label>
+                                    <input type="email" class="form-control" id="f_email" aria-describedby="f_emailHelp">
+                                    <small id="f_emailHelp" class="form-text text-muted"></small>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="f_cidade">Sua Cidade</label>
+                                    <input type="email" class="form-control" id="f_cidade" aria-describedby="f_cidadeHelp">
+                                    <small id="f_cidadeHelp" class="form-text text-muted"></small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="f_idade">Sua Idade</label>
+                                    <input type="email" class="form-control" id="f_idade" aria-describedby="f_idadeHelp">
+                                    <small id="f_idadeHelp" class="form-text text-muted"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="f_pedido">Seu Pedido de Ajuda</label>
+                                    <textarea class="form-control" id="f_pedido" aria-describedby="f_pedidoHelp"></textarea>
+                                    <small id="f_pedidoHelp" class="form-text text-muted"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Permito que o ajudante tenha acesso ao meu número de celular</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-success">Enviar Pedido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal para pedir ajuda -->
+
+    <!-- modal de contato-->
+    <div class="modal fade" id="modalContact" tabindex="-1" aria-labelledby="modalContact" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="modalContactLabel">Contate-nos!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <form name="formContact" id="formContact" method="POST" action="">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label class="form-contact-label" for="contact-label">Sua opinião é muito importante para pordermos aprimiorar os nossos serviços. Por favor, deixe os seus dados e a sua mensagem nos campos abaixo que teremos o maior prazer em retornar.</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="f_nome">Seu Nome</label>
+                                    <input type="text" class="form-control" id="f_nome" aria-describedby="f_nomeContact" placeholder="Ex: João da Silva">
+                                    <small id="f_nomeContact" class="form-text text-muted"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="f_telefone">Seu Telefone</label>
+                                    <input type="text" class="form-control" id="f_telefone" aria-describedby="f_telefoneContact" placeholder="Ex: (11) 9 9999-9999">
+                                    <small id="f_telefoneContact" class="form-text text-muted"></small>
+                                </div>        
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="f_email">Seu E-mail</label>
+                                    <input type="email" class="form-control" id="f_email" aria-describedby="f_emailContact" placeholder="Ex: email@dominio.com.br">
+                                    <small id="f_emailContact" class="form-text text-muted"></small>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="f_motivo">Informe o motivo do contato</label>
+                                    <select class="form-control" id="f_motivo" aria-describedby="f_motivoContact">
+                                        <option id="select-reason">Selecione o motivo...</option>
+                                        <option id="doubt">Dúvidas</option>
+                                        <option id="suggestion">Sugestões</option>
+                                        <option id="claims">Reclamações</option>
+                                        <option id="other">Outro</option>
+                                        
+                                      </select>
+                                    <small id="f_motivoContact" class="form-text text-muted"></small>
+                                </div>        
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="f_sendContact">Escreva sua mensagem</label>
+                                    <textarea class="form-control" id="f_contact" aria-describedby="f_sendContact" placeholder="Descreva o motivo do contato."></textarea>
+                                    <small id="f_contact" class="form-text text-muted"></small>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-success">Enviar Mensagem</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal de contato -->
+
+    <!-- footer -->
+    <footer>
+        <div class="animacoes">
+            <img src="image/rodapeBicileta.png" class="animacao1">
+            <img src="image/rodapeMenina.png" class="animacao2">
+            <img src="image/rodapeMenino.png" class="animacao3">
+            <img src="image/rodapeBicileta2.png" class="animacao4">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-6 text-left">
+                    Sistema desenvolvido pela equipe PI-3<br>
+                    Estação Hack - Digital House - Facebook
+                </div>
+                <div class="col-6 text-right">
+                    <a href="https://github.com/estacao-hack-2020/stay-safe" target="_blank"><i class="fab fa-github"></i> Click to Github</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  </body>
+</html>
