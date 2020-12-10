@@ -45,6 +45,16 @@ body {
     top: 0px;
 }
 
+.banner.blue::before {
+    content: '';
+    background: linear-gradient(79deg, rgb(3, 0, 44) 0%, rgb(1, 0, 39) 34%, rgb(30, 2, 155) 100%);
+    opacity: 0.8;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+}
+
 .banner .infos {
     height: 100%;
     width: 100%;
@@ -54,6 +64,7 @@ body {
     justify-content: center;
     color: #FFF;
 }
+
 
 .banner .infos h1 {
     font-size: 4rem;
@@ -80,7 +91,6 @@ body {
     padding: 5px 20px 5px 20px;
 }
 
-
 header {
     width: 100%;
     position: fixed;
@@ -88,6 +98,11 @@ header {
     z-index: 5;
     padding: 20px 0px 20px 0px;
     background-color: rgba(0,0,0,0.7);
+}
+
+.form-contact-label {
+    font-size: 0.8rem;
+    font-style: italic;
 }
 
 .navbar-toggler {
@@ -248,7 +263,9 @@ footer img {
     opacity: 0;
 }
 
-
+.boxHelp .paises #idade{
+    font-weight: bold;
+}
 
 @-webkit-keyframes animacao1 {
     0% {
