@@ -164,6 +164,10 @@ header .navbar-staysafe .nav-item a:hover {
     margin-top: -200px;
 }
 
+@media screen and (max-width: 765px){
+    .help { margin-top: -64px }
+}
+
 .help .boxHelp {
     background-color: #FFF;
     border-radius: 15px;
