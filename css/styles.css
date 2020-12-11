@@ -164,6 +164,10 @@ header .navbar-staysafe .nav-item a:hover {
     margin-top: -200px;
 }
 
+.help .row {
+    margin-bottom: 25px;
+}
+
 .help .boxHelp {
     background-color: #FFF;
     border-radius: 15px;
@@ -241,6 +245,20 @@ footer .github {
 
 /* media queryes */
 @media (max-width: 767px) {
+    .help .row {
+        margin-bottom: 0px;
+    }
+
+    .help .boxHelp {
+        background-color: #FFF;
+        border-radius: 15px;
+        padding: 25px;
+        border: 3px solid #ecf0f1;
+        overflow: hidden;
+        max-height: 300px;
+        margin-bottom:20px;
+    }
+    
     .help { 
         margin-top: -64px 
     }
