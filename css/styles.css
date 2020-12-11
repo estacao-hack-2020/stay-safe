@@ -164,10 +164,6 @@ header .navbar-staysafe .nav-item a:hover {
     margin-top: -200px;
 }
 
-@media screen and (max-width: 765px){
-    .help { margin-top: -64px }
-}
-
 .help .boxHelp {
     background-color: #FFF;
     border-radius: 15px;
@@ -212,8 +208,6 @@ header .navbar-staysafe .nav-item a:hover {
     color: black;
 }
 
-
-
 footer {
     background-color: #2c3e50;
     margin-top: 200px;
@@ -222,11 +216,13 @@ footer {
     font-weight: 100;
     font-size: 1rem;
     position: relative;
+    text-align: left;
 }
 
 footer a {
     color: #FFF;
     font-size: 1.5rem;
+    text-align: right;
 }
 
 footer a:hover {
@@ -238,6 +234,34 @@ footer a:hover {
 footer img {
     position: absolute;
 }
+
+footer .github {
+    text-align: right;
+}
+
+/* media queryes */
+@media (max-width: 767px) {
+    .help { 
+        margin-top: -64px 
+    }
+
+    footer {
+        background-color: #2c3e50;
+        margin-top: 200px;
+        padding: 30px 0px 30px 0px;
+        color: #FFF;
+        font-weight: 100;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    footer .github {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+}
+/* media queryes */
 
 .animacao1 {
     top: -93px;
