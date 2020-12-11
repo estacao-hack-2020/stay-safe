@@ -1,3 +1,5 @@
+export let lat, lon;
+
 function getLocation()  {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition,showError);
