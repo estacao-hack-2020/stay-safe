@@ -122,6 +122,15 @@
                     </div>
                 </div>
             </div>
+            <div class="row mb-3">
+                <div class="col-12 col-md-12 ">
+                    <div class="boxMap">
+                        <h3>Ajude pessoas próximas a você</h3>
+                        <ul id="map-canvas">
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- content-->
@@ -148,32 +157,23 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-4">
                                 <div class="form-group">
-                                    <label for="f_telefone">Seu Telefone</label>
+                                    <label for="f_telefone">Telefone</label>
                                     <input type="tel" class="form-control" id="f_telefone" aria-describedby="f_telefoneHelp">
                                     <small id="f_telefoneHelp" class="form-text text-muted"></small>
                                 </div>        
                             </div>
-                            <div class="col-6">
+                            <div class="col-5">
                                 <div class="form-group">
-                                    <label for="f_email">Seu E-mail</label>
+                                    <label for="f_email">E-mail</label>
                                     <input type="email" class="form-control" id="f_email" aria-describedby="f_emailHelp">
                                     <small id="f_emailHelp" class="form-text text-muted"></small>
                                 </div>  
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
+                            <div class="col-3">
                                 <div class="form-group">
-                                    <label for="f_cidade">Sua Cidade</label>
-                                    <input type="text" class="form-control" id="f_cidade" aria-describedby="f_cidadeHelp">
-                                    <small id="f_cidadeHelp" class="form-text text-muted"></small>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label for="f_idade">Sua Idade</label>
+                                    <label for="f_idade">Idade</label>
                                     <input type="number" class="form-control" id="f_idade" aria-describedby="f_idadeHelp">
                                     <small id="f_idadeHelp" class="form-text text-muted"></small>
                                 </div>
@@ -229,50 +229,48 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label for="f_nome">Seu Nome</label>
-                                    <input type="text" class="form-control" id="f_nome" aria-describedby="f_nomeContact" placeholder="Ex: João da Silva">
-                                    <small id="f_nomeContact" class="form-text text-muted"></small>
+                                    <label for="c_nome">Seu Nome</label>
+                                    <input type="text" class="form-control" id="c_nome" aria-describedby="f_nomeContact">
+                                    <small id="c_nomeContact" class="form-text text-muted"></small>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-6">
                                 <div class="form-group">
-                                    <label for="f_telefone">Seu Telefone</label>
-                                    <input type="text" class="form-control" id="f_telefone" aria-describedby="f_telefoneContact" placeholder="Ex: (11) 9 9999-9999">
-                                    <small id="f_telefoneContact" class="form-text text-muted"></small>
+                                    <label for="c_telefone">Seu Telefone</label>
+                                    <input type="text" class="form-control" id="c_telefone" aria-describedby="f_telefoneContact">
+                                    <small id="c_telefoneContact" class="form-text text-muted"></small>
                                 </div>        
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
-                                    <label for="f_email">Seu E-mail</label>
-                                    <input type="email" class="form-control" id="f_email" aria-describedby="f_emailContact" placeholder="Ex: email@dominio.com.br">
-                                    <small id="f_emailContact" class="form-text text-muted"></small>
+                                    <label for="c_email">Seu E-mail</label>
+                                    <input type="email" class="form-control" id="c_email" aria-describedby="f_emailContact">
+                                    <small id="c_emailContact" class="form-text text-muted"></small>
                                 </div>  
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label for="f_motivo">Informe o motivo do contato</label>
-                                    <select class="form-control" id="f_motivo" aria-describedby="f_motivoContact">
-                                        <option id="select-reason">Selecione o motivo...</option>
+                                    <label for="c_motivo">Informe o motivo do contato</label>
+                                    <select class="form-control" id="c_motivo" aria-describedby="f_motivoContact">
+                                        <option id="other">Outro</option>
                                         <option id="doubt">Dúvidas</option>
                                         <option id="suggestion">Sugestões</option>
                                         <option id="claims">Reclamações</option>
-                                        <option id="other">Outro</option>
-                                        
                                       </select>
-                                    <small id="f_motivoContact" class="form-text text-muted"></small>
+                                    <small id="c_motivoContact" class="form-text text-muted"></small>
                                 </div>        
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label for="f_sendContact">Escreva sua mensagem</label>
-                                    <textarea class="form-control" id="f_contact" aria-describedby="f_sendContact" placeholder="Descreva o motivo do contato."></textarea>
-                                    <small id="f_contact" class="form-text text-muted"></small>
+                                    <label for="c_sendContact">Escreva sua mensagem</label>
+                                    <textarea class="form-control" id="c_contact" aria-describedby="f_sendContact"></textarea>
+                                    <small id="c_contactSend" class="form-text text-muted"></small>
                                 </div>
                             </div>
                         </div>
@@ -280,7 +278,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-success">Enviar Mensagem</button>
+                    <button type="button" class="btn btn-success" id="btn-msg">Enviar Mensagem</button>
                 </div>
             </div>
         </div>
@@ -312,9 +310,14 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
-    <!-- JS valida formulario -->
-    <script type="module" src="js/validaForm.js"></script>
+    <!-- JS pega localização -->
+    <script src="http://maps.google.com/maps/api/js?"></script>
+    <script src="js/renderMap.js"></script>
 
+    <!-- JS valida formulario -->
+    <script type="module" src="js/validaContato.js"></script>
+    <script type="module" src="js/validaForm.js"></script>
     <script type="module" src="js/enviaPedidoAjuda.js"></script>
+    
 </body>
 </html>
