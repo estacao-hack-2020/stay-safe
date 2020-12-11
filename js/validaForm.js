@@ -9,7 +9,7 @@ let inputs = document.querySelectorAll("#formHelpMe input");
 let textArea = document.querySelector("#formHelpMe textarea")
 
 function validaCamposForm() {
-    for (i = 0; i < inputs.length; i++) {
+    for (let i = 0; i < inputs.length; i++) {
 
         if (document.getElementById(inputs[i].id).value.length < 1) {
             document.getElementById(inputs[i].id + 'Help').innerText = "Desculpe, este campo não pode ser deixado em branco";

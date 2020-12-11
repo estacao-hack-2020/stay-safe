@@ -1,10 +1,8 @@
 const getInputValue = selector => document.querySelector(selector).value;
 
 export default function enviaAjuda() {
-
-
-    // TODO: pegar latitude e longitude atuais
-    const latitude = 0, longitude = 0;
+    
+    const latitude = lat, longitude = lon;
 
     const inputValues = {
         nome: getInputValue('#f_nome'),
