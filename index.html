@@ -63,62 +63,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-4 ">
-                    <div class="boxHelp">
-                        <h3>Porto Alegre</h3>
-                        <ul>
-                            <li id="pessoa">Michel Miléski</li>
-                            <li id="idade">35 anos</li>
-                            <li id="pedido" class="pedido">Necessito ir no mercado para ir fazer compras...</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-4 ">
-                    <div class="boxHelp">
-                        <h3>Viamão</h3>
-                        <ul>
-                            <li id="pessoa">Michel Miléski</li>
-                            <li id="idade">35 anos</li>
-                            <li id="pedido" class="pedido">Necessito ir no mercado para ir fazer compras...</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-4 ">
-                    <div class="boxHelp">
-                        <h3>Gravataí</h3>
-                        <ul>
-                            <li id="pessoa">Michel Miléski</li>
-                            <li id="idade">35 anos</li>
-                            <li id="pedido" class="pedido">Necessito ir no mercado para ir fazer compras...</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-md-4 ">
-                    <div class="boxHelp">
-                        <h3>Porto Alegre</h3>
-                        <ul>
-                            <li id="pessoa">Michel Miléski</li>
-                            <li id="idade">35 anos</li>
-                            <li id="pedido" class="pedido">Necessito ir no mercado para ir fazer compras...</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-4 ">
-                    <div class="boxHelp">
-                        <h3>Viamão</h3>
-                        <ul>
-                            <li id="pessoa">Michel Miléski</li>
-                            <li id="idade">35 anos</li>
-                            <li id="pedido" class="pedido">Necessito ir no mercado para ir fazer compras...</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-4 ">
                     <div class="boxHelp pedirAjuda text-center">
                         <h3>Precisa de ajuda?</h3>
                         <p>Existem pessoas que querem te ajudar, mas para isso</p>
                         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalHelpMe">Clique e nos conte mais!</button>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4 ">
+                    <div class="boxHelp">
+                        <h3>Porto Alegre</h3>
+                        <ul>
+                            <li id="pessoa">Michel Miléski</li>
+                            <li id="idade">35 anos</li>
+                            <li id="pedido" class="pedido">Necessito ir no mercado para ir fazer compras...</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -314,10 +272,12 @@
     <script src="https://maps.google.com/maps/api/js?"></script>
     <script type="module" src="js/renderMap.js"></script>
 
+    <!-- JS API de ajuda -->
+    <script type="module" src="js/HelpApi.js"></script>
+    <script type="module" src="js/exibeAjudas.js"></script>
+
     <!-- JS valida formulario -->
     <script type="module" src="js/validaContato.js"></script>
     <script type="module" src="js/validaForm.js"></script>
-    <script type="module" src="js/enviaPedidoAjuda.js"></script>
-    
 </body>
 </html>

@@ -1,5 +1,5 @@
 // Validação formulario
-import infoSend from './enviaPedidoAjuda.js';
+import { enviaAjuda as infoSend } from './HelpApi.js';
 
 let formulario = document.getElementById("formHelpMe");
 let checked = false;

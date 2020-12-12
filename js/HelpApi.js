@@ -15,7 +15,7 @@ const baseURL = 'https://staysafe-api.herokuapp.com';
  * após o envio, é retornado uma mensagem de sucesso ou erro como alert e no console, 
  * em caso de sucesso o modal também é fechado
  */
-export default function enviaAjuda() {
+export function enviaAjuda() {
 
     const inputValues = {
         nome:       getInputValue('#f_nome'),
@@ -46,4 +46,23 @@ export default function enviaAjuda() {
 
     });
 
+}
+
+/**
+ * @return {Promise<{
+ *  id:          number
+ *  nome:        string
+ *  telefone:	 string
+ *  email:	     string
+ *  idade:	     number
+ *  latitude:	 string
+ *  longitude:   string
+ *  mensagem:    string
+ *  dataCriacao: string
+ *  status:      string
+ * }[]>} retorna Promise com Array de ajudas da api
+ */
+export async function getAjudas(){
+    const response = fetch(`${baseURL}/help`);
+    return await response.json();
 }
