@@ -43,12 +43,12 @@
         <div class="container infos">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h1 id="localizacao">StaySafe - Dados Globais</h1>
-                    <h2 id="casos_confirmados">Total de casos: <mark>64.508.75</mark></h2>
+                    <h1 id="localizacao">StaySafe - Dados Nacionais</h1>
+                    <h2>Casos confirmados: <mark id="casos_confirmados"></mark></h2>
                     <ul>
-                        <li id="casos_ativos">Novos casos (14 dias): <mark>+ 8.072.949</mark></li>
-                        <li id="casos_recuperados">Recuperados: <mark>41.492.849</mark></li>
-                        <li id="casos_mortes">Mortes: <mark>1.492.989</mark></li>
+                        <li>Suspeitos: <mark id="casos_suspeitos"></mark></li>
+                        <li>Recuperados: <mark id="casos_recuperados"></mark></li>
+                        <li>Mortes: <mark id="casos_mortes"></mark></li>
                     </ul>
                 </div>
             </div>
@@ -58,77 +58,10 @@
     <!-- banner -->
 
     <!-- content-->
-    <section id="help" class="help">
+    <section id="casos" class="casos">
         <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-md-4">
-                    <div class="boxHelp">
-                        <h3><img src="image/img-eua.png" alt=""> Estados Unidos</h3>
-                        <ul class="paises">
-                            <li id="pessoa">Total de casos: </li>
-                            <li id="idade">64.508.175</li></br>
-                            <li id="pessoa">Mortes: </li>
-                            <li id="idade">273.518</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <div class="boxHelp">
-                        <h3><img src="image/img-india.png" alt=""> Índia</h3>
-                        <ul class="paises">
-                            <li id="pessoa">Total de casos:</li>
-                            <li id="idade">9.534.964</li></br>
-                            <li id="pessoa">Mortes: </li>
-                            <li id="idade">138.648</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <div class="boxHelp">
-                        <h3><img src="image/img-brasil.png" alt=""> Brasil</h3>
-                        <ul class="paises">
-                            <li id="pessoa">Total de casos:</li>
-                            <li id="idade">6.436.964</li></br>
-                            <li id="pessoa">Mortes: </li>
-                            <li id="idade">174.515</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-md-4">
-                    <div class="boxHelp">
-                        <h3><img src="image/img-russia.png" alt=""> Rússia</h3>
-                        <ul class="paises">
-                            <li id="pessoa">Total de Casos:</li>
-                            <li id="idade">2.327.105</li></br>
-                            <li id="pessoa">Mortes: </li>
-                            <li id="idade">40.630</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <div class="boxHelp">
-                        <h3><img src="image/img-franca.png" alt=""> França</h3>
-                        <ul class="paises">
-                            <li id="pessoa">Total de casos:</li>
-                            <li id="idade">2.221.535</li></br>
-                            <li id="pessoa">Mortes: </li>
-                            <li id="idade">52.383</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <div class="boxHelp">
-                        <h3><img src="image/img-espanha.png" alt=""> Espanha</h3>
-                        <ul class="paises">
-                            <li id="pessoa">Total de casos:</li>
-                            <li id="idade">1.665.775</li></br>
-                            <li id="pessoa">Mortes: </li>
-                            <li id="idade">45.784</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="row" id="casosGlobais">
+                
             </div>
         </div>
     </section>
@@ -158,5 +91,8 @@
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- JS pega localização -->
+    <script type="module" src="js/geolocationGlobal.js"></script>
   </body>
 </html>
