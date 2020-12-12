@@ -9,9 +9,9 @@ function getLocation()  {
       }
   
   function showPosition(position) {
-    let lat=position.coords.latitude;
-    let lon=position.coords.longitude;
-    let latlon=new google.maps.LatLng(lat, lon);
+    var lat=position.coords.latitude;
+    var lon=position.coords.longitude;
+    var latlon=new google.maps.LatLng(lat, lon);
     let mapholder=document.getElementById('map-canvas');
    
     let myOptions={
