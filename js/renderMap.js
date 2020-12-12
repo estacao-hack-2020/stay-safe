@@ -12,7 +12,7 @@ function getLocation()  {
     lat=position.coords.latitude;
     lon=position.coords.longitude;
     let latlon=new google.maps.LatLng(lat, lon);
-    mapholder=document.getElementById('map-canvas');
+    let mapholder=document.getElementById('map-canvas');
    
     myOptions={
     center:latlon,zoom:14,
@@ -20,8 +20,8 @@ function getLocation()  {
     mapTypeControl:false,
     navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
     };
-    map=new google.maps.Map(document.getElementById("map-canvas"),myOptions);
-    marker=new google.maps.Marker({position:latlon,map:map,title:"Você está Aqui!"});
+    let map=new google.maps.Map(document.getElementById("map-canvas"),myOptions);
+    let marker=new google.maps.Marker({position:latlon,map:map,title:"Você está Aqui!"});
 
   }
 
