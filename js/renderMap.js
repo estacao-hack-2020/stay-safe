@@ -1,4 +1,4 @@
-// export let lat, lon;
+export let lat, lon;
 
 function getLocation()  {
     if (navigator.geolocation) {
@@ -9,12 +9,12 @@ function getLocation()  {
       }
   
   function showPosition(position) {
-    var lat=position.coords.latitude;
-    var lon=position.coords.longitude;
+    lat=position.coords.latitude;
+    lon=position.coords.longitude;
     var latlon=new google.maps.LatLng(lat, lon);
     let mapholder=document.getElementById('map-canvas');
    
-    let myOptions={
+    var myOptions={
     center:latlon,zoom:14,
     mapTypeId:google.maps.MapTypeId.ROADMAP,
     mapTypeControl:false,
