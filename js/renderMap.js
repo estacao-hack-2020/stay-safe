@@ -1,4 +1,4 @@
-export let lat, lon;
+// export let lat, lon;
 
 function getLocation()  {
     if (navigator.geolocation) {
@@ -9,8 +9,8 @@ function getLocation()  {
       }
   
   function showPosition(position) {
-    lat=position.coords.latitude;
-    lon=position.coords.longitude;
+    let lat=position.coords.latitude;
+    let lon=position.coords.longitude;
     let latlon=new google.maps.LatLng(lat, lon);
     let mapholder=document.getElementById('map-canvas');
    
@@ -20,7 +20,7 @@ function getLocation()  {
     mapTypeControl:false,
     navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
     };
-    let map=new google.maps.Map(document.getElementById("map-canvas"),myOptions);
+    var map=new google.maps.Map(document.getElementById("map-canvas"),myOptions);
     let marker=new google.maps.Marker({position:latlon,map:map,title:"Você está Aqui!"});
 
   }
