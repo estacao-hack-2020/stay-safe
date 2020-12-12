@@ -11,9 +11,8 @@ function getLocation()  {
   function showPosition(position) {
     lat=position.coords.latitude;
     lon=position.coords.longitude;
-    nome="Localização";
-    latlon=new google.maps.LatLng(lat, lon)
-    mapholder=document.getElementById('map-canvas')
+    latlon=new google.maps.LatLng(lat, lon);
+    mapholder=document.getElementById('map-canvas');
    
     myOptions={
     center:latlon,zoom:14,
