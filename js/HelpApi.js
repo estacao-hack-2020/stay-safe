@@ -63,6 +63,26 @@ export function enviaAjuda() {
  * }[]>} retorna Promise com Array de ajudas da api
  */
 export async function getAjudas(){
-    const response = fetch(`${baseURL}/help`);
+    const response = await fetch(`${baseURL}/help`);
+    return await response.json();
+}
+
+/**
+ * @param {number} id id da Ajuda a ser buscada na API
+ * @return {Promise<{
+ *  id:          number
+ *  nome:        string
+ *  telefone:	 string
+ *  email:	     string
+ *  idade:	     number
+ *  latitude:	 string
+ *  longitude:   string
+ *  mensagem:    string
+ *  dataCriacao: string
+ *  status:      string
+ * }>} retorna Promise com Array de uma Ajuda da API
+*/
+export async function getAjuda(id){
+    const response = await fetch(`${baseURL}/help/${id}`);
     return await response.json();
 }
