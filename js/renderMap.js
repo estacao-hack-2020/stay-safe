@@ -14,7 +14,7 @@ function getLocation()  {
     let latlon=new google.maps.LatLng(lat, lon);
     let mapholder=document.getElementById('map-canvas');
    
-    myOptions={
+    let myOptions={
     center:latlon,zoom:14,
     mapTypeId:google.maps.MapTypeId.ROADMAP,
     mapTypeControl:false,
