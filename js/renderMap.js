@@ -101,8 +101,8 @@ function createMarker(latlng, nome, cidade, bairro, pedido){
        // Variável que define a estrutura do HTML a inserir na Info Window.
        var iwContent = '<div id="iw_container">' +
        '<div class="iw_title">' + nome + '</div>' +
-       '<div class="iw_content">' + cidade + '<br />' +
-       bairro + '<br />' +
+       '<div class="iw_content">' + idade + '<br />' +
+       email + '<br />' +
        pedido + '</div></div>';
        
        // O conteúdo da variável iwContent é inserido na Info Window.
