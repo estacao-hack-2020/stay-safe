@@ -1,6 +1,7 @@
 export let lat, lon;
 
 var mapa=new google.maps.Map(document.getElementById("map-canvas"));
+var infoWindow = new google.maps.InfoWindow();
 
 function getLocation()  {
     if (navigator.geolocation) {
@@ -147,7 +148,7 @@ function createMarker(latlng, nome, cidade, bairro, pedido){
  
     // Cria a nova Info Window com referência à variável infoWindow.
     // O conteúdo da Info Window é criado na função createMarker.
-    let infoWindow = new google.maps.InfoWindow();
+    infoWindow = new google.maps.InfoWindow();
  
     // Evento que fecha a infoWindow com click no mapa.
     google.maps.event.addListener(mapa, 'click', function() {
