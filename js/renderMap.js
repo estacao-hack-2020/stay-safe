@@ -1,3 +1,4 @@
+import { getAjudas } from './HelpApi.js';
 export let lat, lon;
 
 var mapa=new google.maps.Map(document.getElementById("map-canvas"));
@@ -48,42 +49,10 @@ function getLocation()  {
   
       getLocation();
   
-
-  var markersData = [
-    {
-        lat: -23.5058752,
-        lng: -46.482015,
-        nome:"Godofredo",
-        cidade:"São Paulo",
-        bairro:"Ermelino Matarazzo",
-        pedido:"Ir ao mercado"
-     },
-     {
-        lat: -23.4933041,
-        lng: -46.447502,
-        nome:"Astolfo",
-        cidade:"São Paulo",
-        bairro:"São Miguel",
-        pedido:"Ir à farmácia"
-     },
-     {
-        lat: -23.4929306,
-        lng: -46.4825332,
-        nome:"José",
-        cidade:"São Paulo",
-        bairro:"Ermelino Matarazzo",
-        pedido:"Ir ao pet shop"
-     },
-     {
-        lat: -23.5304296,
-        lng: -46.5308839,
-        nome:"Sebastião",
-        cidade:"São Paulo",
-        bairro:"Vila Matilde",
-        pedido:"Ir ao mercado"
-     }
-
-];
+  var markersData = [getAjudas().then( ajudas => {
+    ajudas
+      .filter( ajuda => ajuda.status === 'aguardando' );
+       })];
 
 // Esta função vai percorrer a informação contida na variável markersData
 // e cria os marcadores através da função createMarker
@@ -97,13 +66,13 @@ function displayMarkers(){
     // para que a função createMarker possa criar os marcadores 
     for (var i = 0; i < markersData.length; i++){
  
-       var latlng = new google.maps.LatLng(markersData[i].lat, markersData[i].lng);
+       var latlng = new google.maps.LatLng(markersData[i].latitude, markersData[i].longitude);
        var nome = markersData[i].nome;
-       var cidade = markersData[i].cidade;
-       var bairro = markersData[i].bairro;
+       var idade = markersData[i].idade;
+       var email = markersData[i].email;
        var pedido = markersData[i].pedido;
  
-       createMarker(latlng, nome, cidade, bairro, pedido);
+       createMarker(latlng, nome, idade, email, pedido);
  
        // Os valores de latitude e longitude do marcador são adicionados à
        // variável bounds
