@@ -2,7 +2,7 @@ import { getAjudas } from './HelpApi.js';
 export let lat, lon;
 
 
-var mapa = new google.maps.Map(document.getElementById("map-canvas"));
+var mapa = new google.maps.Map(document.getElementById("map-canvas"),myOptions);
 var infoWindow = new google.maps.InfoWindow();
 var marker = new google.maps.Marker();
 
