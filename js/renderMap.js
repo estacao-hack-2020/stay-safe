@@ -51,7 +51,7 @@ function getLocation()  {
   
       getLocation();
   
-  var markersData = getAjudas();
+  var markersData = [getAjudas()];
 
 // Esta função vai percorrer a informação contida na variável markersData
 // e cria os marcadores através da função createMarker
