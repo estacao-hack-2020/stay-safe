@@ -1,6 +1,6 @@
 export let lat, lon;
 
-var mapa=new google.maps.Map(document.getElementById("map-canvas");
+var mapa=new google.maps.Map(document.getElementById("map-canvas"));
 
 function getLocation()  {
     if (navigator.geolocation) {
