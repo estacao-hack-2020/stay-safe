@@ -49,10 +49,7 @@ function getLocation()  {
   
       getLocation();
   
-  var markersData = [getAjudas().then( ajudas => {
-    ajudas
-      .filter( ajuda => ajuda.status === 'aguardando' );
-       })];
+  var markersData = getAjudas();
 
 // Esta função vai percorrer a informação contida na variável markersData
 // e cria os marcadores através da função createMarker
