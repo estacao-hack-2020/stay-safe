@@ -149,9 +149,10 @@ function createMarker(latlng, nome, cidade, bairro, pedido){
     let infoWindow = new google.maps.InfoWindow();
  
     // Evento que fecha a infoWindow com click no mapa.
-    google.maps.event.addListener(mapa, 'click', function() {
-       infoWindow.close();
-    });
+// Comentado por enquanto
+//    google.maps.event.addListener(mapa, 'click', function() {
+//       infoWindow.close();
+//    });
  
     // Chamada para a função que vai percorrer a informação
     // contida na variável markersData e criar os marcadores a mostrar no mapa
