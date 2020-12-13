@@ -2,7 +2,7 @@ export let lat, lon;
 
 var mapa=new google.maps.Map(document.getElementById("map-canvas"));
 var infoWindow = new google.maps.InfoWindow();
-
+var marker=new google.maps.Marker();
 function getLocation()  {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition,showError);
@@ -24,7 +24,7 @@ function getLocation()  {
     navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
     };
     mapa=new google.maps.Map(document.getElementById("map-canvas"),myOptions);
-    let marker=new google.maps.Marker({position:latlon,map:mapa,title:"Você está Aqui!"});
+    marker=new google.maps.Marker({position:latlon,map:mapa,title:"Você está Aqui!"});
   }
 
     
@@ -140,7 +140,7 @@ function createMarker(latlng, nome, cidade, bairro, pedido){
        infoWindow.setContent(iwContent);
  
        // A Info Window é aberta com um click no marcador.
-       infoWindow.open(map, marker);
+       infoWindow.open(mapa, marker);
     });
  }
 
