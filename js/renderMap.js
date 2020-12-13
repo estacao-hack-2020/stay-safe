@@ -21,7 +21,7 @@ function getLocation()  {
     navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
     };
     var mapa=new google.maps.Map(document.getElementById("map-canvas"),myOptions);
-    let marker=new google.maps.Marker({position:latlon,map:map,title:"Você está Aqui!"});
+    let marker=new google.maps.Marker({position:latlon,map:mapa,title:"Você está Aqui!"});
 
   }
 
