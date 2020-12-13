@@ -1,5 +1,7 @@
 export let lat, lon;
 
+var mapa=new google.maps.Map(document.getElementById("map-canvas");
+
 function getLocation()  {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition,showError);
@@ -20,9 +22,8 @@ function getLocation()  {
     mapTypeControl:false,
     navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
     };
-    var mapa=new google.maps.Map(document.getElementById("map-canvas"),myOptions);
+    mapa=new google.maps.Map(document.getElementById("map-canvas"),myOptions);
     let marker=new google.maps.Marker({position:latlon,map:mapa,title:"Você está Aqui!"});
-
   }
 
     
@@ -149,10 +150,9 @@ function createMarker(latlng, nome, cidade, bairro, pedido){
     let infoWindow = new google.maps.InfoWindow();
  
     // Evento que fecha a infoWindow com click no mapa.
-// Comentado por enquanto
-//    google.maps.event.addListener(mapa, 'click', function() {
-//       infoWindow.close();
-//    });
+    google.maps.event.addListener(mapa, 'click', function() {
+       infoWindow.close();
+    });
  
     // Chamada para a função que vai percorrer a informação
     // contida na variável markersData e criar os marcadores a mostrar no mapa
