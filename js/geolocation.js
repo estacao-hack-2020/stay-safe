@@ -26,6 +26,7 @@ fetch(`http://ip-api.com/json`, {
 })
 .then(function(response){
     response.json().then(function(data){
+        document.querySelector('#ondeEstou').innerText = data.regionName;
         mountHome(data.region);
     });
 })
