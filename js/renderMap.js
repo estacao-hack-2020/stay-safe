@@ -20,7 +20,7 @@ function getLocation()  {
     mapTypeControl:false,
     navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
     };
-    var map=new google.maps.Map(document.getElementById("map-canvas"),myOptions);
+    var mapa=new google.maps.Map(document.getElementById("map-canvas"),myOptions);
     let marker=new google.maps.Marker({position:latlon,map:map,title:"Você está Aqui!"});
 
   }
@@ -112,13 +112,13 @@ function displayMarkers(){
     // a API, através da sua função fitBounds, vai redefinir o nível do zoom
     // e consequentemente a área do mapa abrangida de acordo com
     // as posições dos marcadores
-    map.fitBounds(bounds);
+    mapa.fitBounds(bounds);
  }
 
  // Função que cria os marcadores e define o conteúdo de cada Info Window.
 function createMarker(latlng, nome, cidade, bairro, pedido){
     var marker = new google.maps.Marker({
-       map: map,
+       map: mapa,
        position: latlng,
        title: nome
     });
@@ -149,7 +149,7 @@ function createMarker(latlng, nome, cidade, bairro, pedido){
     let infoWindow = new google.maps.InfoWindow();
  
     // Evento que fecha a infoWindow com click no mapa.
-    google.maps.event.addListener(map, 'click', function() {
+    google.maps.event.addListener(mapa, 'click', function() {
        infoWindow.close();
     });
  
