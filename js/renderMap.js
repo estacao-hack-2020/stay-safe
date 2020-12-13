@@ -3,9 +3,10 @@ export let lat, lon;
 
 
 //var mapa=new google.maps.Map(document.getElementById("map-canvas"));
-var mapa=new google.maps.Map(google.maps.LatLng(lat, lon));
+var mapa = new google.maps.Map();
 var infoWindow = new google.maps.InfoWindow();
-var marker=new google.maps.Marker();
+var marker = new google.maps.Marker();
+
 function getLocation()  {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition,showError);
