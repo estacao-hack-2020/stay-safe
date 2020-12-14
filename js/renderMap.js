@@ -1,10 +1,12 @@
-import { getAjudas } from './HelpApi.js';
 export let lat, lon;
+import { getAjudas } from './HelpApi.js';
 
 
-var mapa = '';
+var mapa = new google.maps.Map(document.getElementById("map-canvas"));
 var infoWindow = new google.maps.InfoWindow();
-var marker = new google.maps.Marker();
+var marcador = new google.maps.Marker();
+var marcadorAjuda = new google.maps.Marker();
+
 
 function getLocation()  {
     if (navigator.geolocation) {
@@ -18,7 +20,7 @@ function getLocation()  {
     lat=position.coords.latitude;
     lon=position.coords.longitude;
     var latlon=new google.maps.LatLng(lat, lon);
-    let mapholder=document.getElementById('map-canvas');
+    /* mapholder = document.getElementById('map-canvas'); */
    
     var myOptions={
     center:latlon,zoom:14,
@@ -26,8 +28,8 @@ function getLocation()  {
     mapTypeControl:false,
     navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
     };
-    mapa=new google.maps.Map(document.getElementById("map-canvas"),myOptions);
-    marker=new google.maps.Marker({position:latlon,map:mapa,title:"Você está Aqui!"});
+    mapa = new google.maps.Map(document.getElementById("map-canvas"),myOptions);
+    marcador = new google.maps.Marker({position:latlon,map:mapa,title:"Você está Aqui!"});
   }
 
     
@@ -49,13 +51,20 @@ function getLocation()  {
       }
     }
   
-      getLocation();
+      getLocation(mapa, marcador);
+
+
+      
+  getAjudas().then( ajudas => {
+
+    let markersData = ajudas.filter( ajuda => ajuda.status === 'aguardando' );
+    displayMarkers(markersData);
   
-  var markersData = [getAjudas()];
+  });
 
 // Esta função vai percorrer a informação contida na variável markersData
 // e cria os marcadores através da função createMarker
-function displayMarkers(){
+function displayMarkers(markersData){
 
     // esta variável vai definir a área de mapa a abranger e o nível do zoom
     // de acordo com as posições dos marcadores
@@ -69,9 +78,9 @@ function displayMarkers(){
        var nome = markersData[i].nome;
        var idade = markersData[i].idade;
        var email = markersData[i].email;
-       var pedido = markersData[i].pedido;
+       var mensagem = markersData[i].mensagem;
  
-       createMarker(latlng, nome, idade, email, pedido);
+       createMarker(latlng, nome, idade, email, mensagem);
  
        // Os valores de latitude e longitude do marcador são adicionados à
        // variável bounds
@@ -86,8 +95,8 @@ function displayMarkers(){
  }
 
  // Função que cria os marcadores e define o conteúdo de cada Info Window.
-function createMarker(latlng, nome, cidade, bairro, pedido){
-    var marker = new google.maps.Marker({
+function createMarker(latlng, nome, idade, email, mensagem){
+    marcadorAjuda = new google.maps.Marker({
        map: mapa,
        position: latlng,
        title: nome
@@ -95,20 +104,20 @@ function createMarker(latlng, nome, cidade, bairro, pedido){
  
     // Evento que dá instrução à API para estar alerta ao click no marcador.
     // Define o conteúdo e abre a Info Window.
-    google.maps.event.addListener(marker, 'click', function() {
+    google.maps.event.addListener(marcadorAjuda, 'click', function() {
        
        // Variável que define a estrutura do HTML a inserir na Info Window.
        var iwContent = '<div id="iw_container">' +
-       '<div class="iw_title">' + nome + '</div>' +
-       '<div class="iw_content">' + idade + '<br />' +
-       email + '<br />' +
-       pedido + '</div></div>';
+       '<div class="iw_title">Nome: ' + nome + '</div>' +
+       '<div class="iw_content">Idade: ' + idade + ' anos<br />Email: ' +
+       email + '<br />Mensagem: ' +
+       mensagem + '</div></div>';
        
        // O conteúdo da variável iwContent é inserido na Info Window.
        infoWindow.setContent(iwContent);
  
        // A Info Window é aberta com um click no marcador.
-       infoWindow.open(mapa, marker);
+       infoWindow.open(mapa, marcadorAjuda);
     });
  }
 
@@ -125,7 +134,7 @@ function createMarker(latlng, nome, cidade, bairro, pedido){
  
     // Chamada para a função que vai percorrer a informação
     // contida na variável markersData e criar os marcadores a mostrar no mapa
-    displayMarkers();
+    // displayMarkers();
  }
  google.maps.event.addDomListener(window, 'load', initialize);
 
