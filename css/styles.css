@@ -174,7 +174,7 @@ header .navbar-staysafe .nav-item a:hover {
     padding: 25px;
     border: 3px solid #ecf0f1;
     overflow: hidden;
-    max-height: 300px;
+    min-height: 300px;
 }
 
 .help .boxHelp:hover {
