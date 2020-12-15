@@ -174,7 +174,8 @@ header .navbar-staysafe .nav-item a:hover {
     padding: 25px;
     border: 3px solid #ecf0f1;
     overflow: hidden;
-    min-height: 300px;
+    min-height: 350px;
+    margin-bottom: 20px;
 }
 
 .help .boxHelp:hover {
@@ -202,7 +203,7 @@ header .navbar-staysafe .nav-item a:hover {
     background-position: left top;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100%;
+    height: 300px;
     color: #FFF;
     position: relative;
     cursor: default;
@@ -325,7 +326,7 @@ footer .github {
         padding: 25px;
         border: 3px solid #ecf0f1;
         overflow: hidden;
-        max-height: 300px;
+        min-height: 300px;
         margin-bottom:20px;
     }
     
